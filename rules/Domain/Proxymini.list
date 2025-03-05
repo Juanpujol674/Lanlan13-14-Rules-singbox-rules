@@ -7,8 +7,8 @@ DOMAIN-SUFFIX,ify.ac
 DOMAIN-SUFFIX,nic.eu.org
 DOMAIN-SUFFIX,pexels.com
 DOMAIN-SUFFIX,dl.google.com
-DOMAIN-SUFFIX,nevergiveup.us.kg
-DOMAIN-SUFFIX,random.ouonet.org
+DOMAIN-SUFFIX,qichiyu.com
+DOMAIN,qichiyu.com
 # docker rules 
 DOMAIN-SUFFIX,compose-spec.io
 DOMAIN-SUFFIX,docker.com

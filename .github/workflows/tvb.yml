@@ -1,4 +1,4 @@
-name: Sync and Compile Emby Rules
+name: Sync and Compile TVB Rules
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  emby_rules:
+  tvb_rules:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,43 +29,36 @@ jobs:
         curl -sL "https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-${version}.gz" | \
           gunzip -c > /usr/local/bin/mihomo && chmod +x /usr/local/bin/mihomo
 
-    - name: Fetch and Merge Emby Rules
+    - name: Fetch TVB Rules
       run: |
         mkdir -p rules/Domain  # 确保目录存在
 
-        # 下载 Emby 规则文件
-        curl -sL "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/emby.list" -o rules/Domain/emby1.list
-        curl -sL "https://raw.githubusercontent.com/666OS/YYDS/main/mihomo/rules/emby.list" -o rules/Domain/emby2.list
+        # 下载 TVB 规则文件
+        curl -sL "https://raw.githubusercontent.com/btjson/loon/refs/heads/main/TVB.list" -o rules/Domain/tvb.list
 
-        # 合并去重并排除包含 IC DR 的规则
-        cat rules/Domain/emby1.list rules/Domain/emby2.list | grep -v '^#' | grep -v 'IC DR' | sort -u > rules/Domain/merged_emby.list
-
-    - name: Convert Emby Rules to YAML
+    - name: Convert TVB Rules to YAML
       run: |
-        echo "payload:" > rules/Domain/emby.yaml
+        echo "payload:" > rules/Domain/tvb.yaml
         while IFS=, read -r type value; do
           if [[ -n "$type" && -n "$value" ]]; then
             # 处理 DOMAIN 规则，直接加入
             if [[ "$type" == "DOMAIN" ]]; then
-              echo "  - $value" >> rules/Domain/emby.yaml
+              echo "  - $value" >> rules/Domain/tvb.yaml
             # 处理 DOMAIN-SUFFIX 规则，加上 *.
             elif [[ "$type" == "DOMAIN-SUFFIX" ]]; then
-              echo "  - '*.$value'" >> rules/Domain/emby.yaml
+              echo "  - '*.$value'" >> rules/Domain/tvb.yaml
             fi
           fi
-        done < rules/Domain/merged_emby.list
+        done < rules/Domain/tvb.list
 
-    - name: Convert Emby Rules to MRS
+    - name: Convert TVB Rules to MRS
       run: |
         # 使用 mihomo 转换为 MRS 格式
-        mihomo convert-ruleset domain yaml rules/Domain/emby.yaml rules/Domain/emby.mrs
+        mihomo convert-ruleset domain yaml rules/Domain/tvb.yaml rules/Domain/tvb.mrs
 
-    - name: Clean up the source files
+    - name: Clean up and Commit Changes
       run: |
-        # 删除源文件
-        rm -f rules/Domain/emby1.list rules/Domain/emby2.list rules/Domain/merged_emby.list
-
-    - name: Commit and Push Changes
-      run: |
+        # 删除原始的 tvb.list 文件，保留 tvb.yaml 和 tvb.mrs
+        rm -f rules/Domain/tvb.list
         git add .
-        git diff-index --quiet HEAD -- || (git commit -m "Updated Emby rules (merged emby.list -> emby.mrs)" && git push)
+        git diff-index --quiet HEAD -- || (git commit -m "Updated TVB rules (tvb.list -> tvb.mrs)" && git push)
