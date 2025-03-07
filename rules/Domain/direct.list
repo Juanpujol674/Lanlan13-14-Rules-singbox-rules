@@ -3,16 +3,16 @@
 # REPO: https://github.com/Lanlan13-14/rule
 # UPDATED: 2025-01-15 23:58:51
 DOMAIN-SUFFIX,openwrt.ai
-DOMAIN-SUFFIX,dl.openwrt.ai
-DOMAIN-SUFFIX,istore.istoreos.com
-DOMAIN-SUFFIX,wkdaily.cpolar.top
+DOMAIN,dl.openwrt.ai
+DOMAIN-SUFFIX,istoreos.com
+DOMAIN,wkdaily.cpolar.top
 DOMAIN-SUFFIX,mao.fan
 DOMAIN-SUFFIX,blog.cyida.com
 DOMAIN-SUFFIX,yichafen.com
 DOMAIN-SUFFIX,zyyme.com
 DOMAIN-SUFFIX,stash.wiki
 DOMAIN-SUFFIX,linux.do
-DOMAIN-SUFFIX,www.techxiaofei.com
+DOMAIN,www.techxiaofei.com
 DOMAIN-SUFFIX,docs.canets.org
 DOMAIN-SUFFIX,myip.ipip.net
 DOMAIN-SUFFIX,5ddd.com
