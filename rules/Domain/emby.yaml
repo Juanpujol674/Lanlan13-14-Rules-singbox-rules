@@ -1,13 +1,19 @@
 payload:
-  - 195.201.86.86
+  - 2pfdml.mobaiemby.site
+  - aikan.cloud
+  - aikan.la
   - cavps.eu.org
   - cc.coemn.com
+  - cf-cdn1.nebula-media.org
   - cminf.sfcat.link
   - cuinf.sfcat.link
   - emby.aikan.cloud
   - emby.aikan.la
+  - emby.nebula-media.org
   - notnetflix.cos.cat
   - random.ouonet.org
+  - starharn-cf.nebula-media.org
+  - starharn.nebula-media.org
   - '*.123456.al'
   - '*.16bit.cfd'
   - '*.20120714.xyz'
@@ -46,9 +52,11 @@ payload:
   - '*.cinema.facmata.net'
   - '*.deja-vu.beauty'
   - '*.dicarerhome.com'
+  - '*.e.degyax.one'
   - '*.ednovas.org'
   - '*.em.ssky.me'
   - '*.emby-cf.plusmedia.site'
+  - '*.emby-myg-de.vfing.de'
   - '*.emby-sg.plusmedia.site'
   - '*.emby.aiyowei.ml'
   - '*.emby.bid'
@@ -121,7 +129,6 @@ payload:
   - '*.movie.xeton.dev'
   - '*.mulgore.net'
   - '*.nanflix.net'
-  - '*.nebula-media.org'
   - '*.newpppp.com'
   - '*.newwan.top'
   - '*.nijigem.by'
@@ -158,6 +165,7 @@ payload:
   - '*.tanhuatv.site'
   - '*.texon.fans'
   - '*.tkremby.xyz'
+  - '*.tv.worldline.space'
   - '*.uuuoo.cc'
   - '*.wiri.tk'
   - '*.xiaoyi.one'
