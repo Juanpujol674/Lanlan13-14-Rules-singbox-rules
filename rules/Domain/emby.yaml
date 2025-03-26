@@ -14,6 +14,8 @@ payload:
   - random.ouonet.org
   - starharn-cf.nebula-media.org
   - starharn.nebula-media.org
+  - web-starharn.nebula-media.org
+  - web.nebula-media.org
   - '*.123456.al'
   - '*.16bit.cfd'
   - '*.20120714.xyz'
