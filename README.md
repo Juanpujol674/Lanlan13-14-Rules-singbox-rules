@@ -41,82 +41,83 @@ mihomo使用mrs格式文件，Stash使用yaml格式文件
 - 本项目的订阅转换模板/yaml文件是参考 ACL4SSR，Aethersailor等规则修改而来，基于作者个人理解做出的修改，另外我的更新不固定建议每2-3周下载一次配置文件替换，以获得最佳体验/也可配合Substore一同使用达到如同使用订阅链接的效果(每次更新订阅即会自动拉取配置文件更新，无需手动下载上传)，同时感谢各位的大力支持
 
 #### Substore部署使用教程，高级玩法请将Substore更新至最新版本，注意更新前请先备份以防止配置丢失
-[Sub-store结合教程](https://github.com/Lanlan13-14/Rules/blob/main/Others/Substore.md)
 
-[Sub-store直达链接](https://github.com/sub-store-org/Sub-Store)
+[![Sub-store结合教程](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/sub-store-mini.png)](https://github.com/Lanlan13-14/Rules/blob/main/Others/Substore.md)[Sub-store结合教程](https://github.com/Lanlan13-14/Rules/blob/main/Others/Substore.md)
+
+[![Sub-store直达链接](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/sub-store-mini.png)](https://github.com/sub-store-org/Sub-Store)[Sub-store直达链接](https://github.com/sub-store-org/Sub-Store)
 
 若无所需游戏规则，可以向该项目提交请求或者自己抓包获取后给该项目提交请求
 [游戏规则相关内容](https://github.com/FQrabbit/SSTap-Rule)
 
 ### 标准版/Standard
 
-![Mihomo](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/mihomo-mini.png)Mihomo使用/For Mihomo➡️
+[![Mihomo](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/mihomo-mini.png)](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull.yaml)Mihomo使用/For Mihomo（支持最新tf版stash）➡️
 **[configfull.yaml](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull.yaml)**
 
-![Stash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/stash-mini.png)Stash使用/For Stash➡️
+[![Stash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/stash-mini.png)](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_Stash.yaml)Stash使用/For Stash➡️
 **[configfull_Stash.yaml](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_Stash.yaml)**
 
 ##### 无广告拦截版/No ad blocking version
 
-![Mihomo](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/mihomo-mini.png)Mihomo使用/For Mihomo➡️
+[![Mihomo](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/mihomo-mini.png)](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_NoAd.yaml)Mihomo使用/For Mihomo（支持最新tf版stash）➡️
 
 **[configfull_NoAd.yaml](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_NoAd.yaml)**
 
-![Stash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/stash-mini.png)Stash使用/For Stash➡️
+[![Stash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/stash-mini.png)](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_NoAd_Stash.yaml)Stash使用/For Stash➡️
 
 **[configfull_NoAd_Stash.yaml](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_NoAd_Stash.yaml)**
 
 ### Lite版本/Lite version
 ###### 该版本高度依赖Geo数据库，请及时更新您的数据库/This version is highly dependent on the Geo database, please update your database in time.
 
-![Mihomo](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/mihomo-mini.png)Mihomo使用/For Mihomo➡️
+[![Mihomo](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/mihomo-mini.png)](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_lite.yaml)Mihomo使用/For Mihomo（支持最新tf版stash）➡️
 
 **[configfull_lite.yaml](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_lite.yaml)**
 
-![Stash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/stash-mini.png)Stash使用/For Stash➡️
+[![Stash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/stash-mini.png)](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_Stash_lite.yaml)Stash使用/For Stash➡️
 
 **[configfull_Stash_lite.yaml](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_Stash_lite.yaml)**
 
 ##### 无广告拦截版/No ad blocking version
 
-![Mihomo](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/mihomo-mini.png)Mihomo使用/For Mihomo➡️
+[![Mihomo](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/mihomo-mini.png)](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_NoAd_lite.yaml)Mihomo使用/For Mihomo（支持最新tf版stash）➡️
 
 **[configfull_NoAd_lite.yaml](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_NoAd_lite.yaml)**
 
-![Stash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/stash-mini.png)Stash使用/For Stash➡️
+[![Stash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/stash-mini.png)](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_NoAd_Stash_lite.yaml)Stash使用/For Stash➡️
 
 **[configfull_NoAd_Stash_lite.yaml](https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/configfull_NoAd_Stash_lite.yaml)**
 
 ## 客户端推荐/Client Recommendation
 •Windows/MacOS/Linux
 
-![Clash-verge-rev](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/clash-verge-rev-mini.png)[Clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)（若出现DNS泄漏请打开严格路由）
+[![Clash-verge-rev](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/clash-verge-rev-mini.png)](https://github.com/clash-verge-rev/clash-verge-rev)[Clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)（若出现DNS泄漏请打开严格路由）
 
 
-![Mihomo](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/mihomo-mini.png)[Clash-meta-Party](https://github.com/xishang0128/clash-meta-party)（若出现DNS泄漏请打开严格路由）
+[![Mihomo](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/mihomo-mini.png)](https://github.com/xishang0128/clash-meta-party)[Clash-meta-Party](https://github.com/xishang0128/clash-meta-party)（若出现DNS泄漏请打开严格路由）
 
 
 •Android
 
-![Flclash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/flclash-mini.png)[FlClash](https://github.com/chen08209/FlClash)
+[![Flclash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/flclash-mini.png)](https://github.com/chen08209/FlClash)[FlClash](https://github.com/chen08209/FlClash)
 
 
 •iOS
 
-![Stash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/stash-mini.png)[Stash](https://apps.apple.com/app/stash/id1596063349?platform=iphone&l=zh-CN)
+[![Stash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/stash-mini.png)](https://apps.apple.com/app/stash/id1596063349?platform=iphone&l=zh-CN)[Stash](https://apps.apple.com/app/stash/id1596063349?platform=iphone&l=zh-CN)
 
-![Pharos](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/pharos-mini.png)[Pharos](https://apps.apple.com/us/app/pharos-pro/id1456610173)
+[![Pharos](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/pharos-mini.png)](https://apps.apple.com/us/app/pharos-pro/id1456610173)[Pharos](https://apps.apple.com/us/app/pharos-pro/id1456610173)
 
 •鸿蒙/HarmonyOS
 
-![ClashNEXT](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/clash-next-mini.png)[ClashNEXT](https://github.com/xiaobaigroup/hapapp)
+[![ClashNEXT](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/clash-next-mini.png)](https://github.com/xiaobaigroup/hapapp)[ClashNEXT](https://github.com/xiaobaigroup/hapapp)
 
 
 •Openwrt
 
-![Nikki](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/nikki-mini.png)[Nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)
+[![Nikki](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/nikki-mini.png)](https://github.com/nikkinikki-org/OpenWrt-nikki)[Nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)
 
-![Openclash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/openclash-mini.png)[Openclash](https://github.com/vernesong/OpenClash)
+[![Openclash](https://raw.githubusercontent.com/Lanlan13-14/Icon-for-webui/refs/heads/main/openclash-mini.png)](https://github.com/vernesong/OpenClash)[Openclash](https://github.com/vernesong/OpenClash)
 
 ## 🚫广告拦截效果/Test your ad blocking effect
 
