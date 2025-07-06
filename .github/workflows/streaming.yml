@@ -1,0 +1,81 @@
+name: Sync and Compile Streaming Rules
+
+on:
+  schedule:
+    - cron: '0 17 * * *'  # 每天 01:00 北京时间
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compile_streaming_rules:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Git user
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Install mihomo
+      run: |
+        version=$(curl -sL https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/version.txt)
+        curl -sL "https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-${version}.gz" | \
+          gunzip -c > /usr/local/bin/mihomo && chmod +x /usr/local/bin/mihomo
+
+    - name: Fetch and Process streaming_hk
+      run: |
+        mkdir -p rules/Domain
+
+        curl -sL "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/streaming_hk.list" -o rules/Domain/streaming_hk.list
+        grep -E 'DOMAIN-SUFFIX|DOMAIN' rules/Domain/streaming_hk.list | sed -E 's/DOMAIN-SUFFIX,/*./g; s/DOMAIN,//g' > rules/Domain/streaming_hk-domain.list
+
+        echo "payload:" > rules/Domain/streaming_hk.yaml
+        sort -u rules/Domain/streaming_hk-domain.list | awk '{print "  - \047" $0 "\047"}' >> rules/Domain/streaming_hk.yaml
+
+        mihomo convert-ruleset domain yaml rules/Domain/streaming_hk.yaml rules/Domain/streaming_hk.mrs
+        rm -f rules/Domain/streaming_hk-domain.list
+
+    - name: Fetch and Process streaming_sg
+      run: |
+        curl -sL "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/streaming_sg.list" -o rules/Domain/streaming_sg.list
+        grep -E 'DOMAIN-SUFFIX|DOMAIN' rules/Domain/streaming_sg.list | sed -E 's/DOMAIN-SUFFIX,/*./g; s/DOMAIN,//g' > rules/Domain/streaming_sg-domain.list
+
+        echo "payload:" > rules/Domain/streaming_sg.yaml
+        sort -u rules/Domain/streaming_sg-domain.list | awk '{print "  - \047" $0 "\047"}' >> rules/Domain/streaming_sg.yaml
+
+        mihomo convert-ruleset domain yaml rules/Domain/streaming_sg.yaml rules/Domain/streaming_sg.mrs
+        rm -f rules/Domain/streaming_sg-domain.list
+
+    - name: Fetch and Process streaming_tw
+      run: |
+        curl -sL "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/streaming_tw.list" -o rules/Domain/streaming_tw.list
+        grep -E 'DOMAIN-SUFFIX|DOMAIN' rules/Domain/streaming_tw.list | sed -E 's/DOMAIN-SUFFIX,/*./g; s/DOMAIN,//g' > rules/Domain/streaming_tw-domain.list
+
+        echo "payload:" > rules/Domain/streaming_tw.yaml
+        sort -u rules/Domain/streaming_tw-domain.list | awk '{print "  - \047" $0 "\047"}' >> rules/Domain/streaming_tw.yaml
+
+        mihomo convert-ruleset domain yaml rules/Domain/streaming_tw.yaml rules/Domain/streaming_tw.mrs
+        rm -f rules/Domain/streaming_tw-domain.list
+
+    - name: Fetch and Process streaming_uk
+      run: |
+        curl -sL "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/streaming_uk.list" -o rules/Domain/streaming_uk.list
+        grep -E 'DOMAIN-SUFFIX|DOMAIN' rules/Domain/streaming_uk.list | sed -E 's/DOMAIN-SUFFIX,/*./g; s/DOMAIN,//g' > rules/Domain/streaming_uk-domain.list
+
+        echo "payload:" > rules/Domain/streaming_uk.yaml
+        sort -u rules/Domain/streaming_uk-domain.list | awk '{print "  - \047" $0 "\047"}' >> rules/Domain/streaming_uk.yaml
+
+        mihomo convert-ruleset domain yaml rules/Domain/streaming_uk.yaml rules/Domain/streaming_uk.mrs
+        rm -f rules/Domain/streaming_uk-domain.list
+
+    - name: Commit and Push Changes
+      run: |
+        git add .
+        git diff-index --quiet HEAD -- || (git commit -m "Updated Streaming rules" && git push)

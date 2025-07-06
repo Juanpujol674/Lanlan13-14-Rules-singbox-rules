@@ -1,0 +1,27 @@
+DOMAIN-SUFFIX,bbc.co.uk
+DOMAIN-SUFFIX,bbci.co.uk
+DOMAIN-SUFFIX,bbc.co
+DOMAIN-SUFFIX,bbc.com
+DOMAIN-SUFFIX,bbci.co
+DOMAIN-SUFFIX,bbc.net.uk
+DOMAIN-SUFFIX,bbcfmt.hs.llnwd.net
+DOMAIN-SUFFIX,bbci.co.uk
+DOMAIN-SUFFIX,bidi.net.uk
+DOMAIN-SUFFIX,aod-dash-uk-live.akamaized.net
+DOMAIN-SUFFIX,aod-hls-uk-live.akamaized.net
+DOMAIN-SUFFIX,vod-dash-uk-live.akamaized.net
+DOMAIN-SUFFIX,vod-thumb-uk-live.akamaized.net
+DOMAIN-SUFFIX,a753.w10.akamai.net
+
+# iTV
+DOMAIN-SUFFIX,itv.com
+DOMAIN-SUFFIX,yospace.com
+DOMAIN-SUFFIX,itvstatic.com
+DOMAIN-SUFFIX,itv-hub.cdn-v3.conductrics.com
+DOMAIN-SUFFIX,c.contentsquare.net
+DOMAIN-SUFFIX,itvpnp.live.ott.irdeto.com
+DOMAIN-SUFFIX,itvdotcom.2cnt.net
+
+# Channel 4
+DOMAIN-SUFFIX,c4assets.com
+DOMAIN-SUFFIX,channel4.com
