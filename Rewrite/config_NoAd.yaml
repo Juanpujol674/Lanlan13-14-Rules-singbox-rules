@@ -232,6 +232,7 @@ rules:
   - RULE-SET,signal_domain,Signal
   - RULE-SET,iptv_domain,全球直连
   - RULE-SET,private_domain,全球直连
+  - DOMAIN-KEYWORD,hk.tv.global.mi.com,节点选择
   - RULE-SET,xiaomi_domain,全球直连
   - RULE-SET,steam_cn_domain,全球直连
   - RULE-SET,steamcdn_domain,全球直连
@@ -260,6 +261,8 @@ rules:
   - RULE-SET,threads_domain,Meta
   - RULE-SET,meta_domain,Meta
   - RULE-SET,facebook_ip,Meta,no-resolve
+  - DOMAIN-SUFFIX,mytvsuper.com,Global-TV
+  - DOMAIN-SUFFIX,mytv.com.hk,Global-TV
   - RULE-SET,twitch_domain,Global-TV
   - RULE-SET,porn_domain,Global-TV
   - RULE-SET,TVB_domain,Global-TV
